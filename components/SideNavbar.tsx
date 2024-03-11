@@ -13,6 +13,7 @@ const SideNavbar: React.FC = () => {
     { text: 'Recent Projects', href: './projects' },
     { text: 'References', href: './references' },
     { text: 'Contact Me', href: './contact' },
+    { text: 'ACHIEVE', href: './achievementsSection' },
   ];
 
   return (
