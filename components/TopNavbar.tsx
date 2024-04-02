@@ -24,11 +24,14 @@ const TopNavbar: React.FC = () => {
 
   return (
     <header>
-      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+      <nav 
+      className='fixed overflow-hidden z-20 w-full bg-white/80 dark:bg-gray-950/0 dark:shadow-md rounded-b-lg dark:shadow-gray-950/10 border-gray-200 border-[--ui-light-border-color]  dark:border-[--ui-dark-border-color] backdrop-blur-2xl'
+      // className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800"
+      >
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link href="https://flowbite.com"  className="flex items-center">
               <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-              <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+              <span className="self-center text-xl font-bold whitespace-nowrap dark:text-orange-500">Itzz</span>
 
           </Link>
           <div className="flex items-center lg:order-2">
@@ -46,7 +49,7 @@ const TopNavbar: React.FC = () => {
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               {navigationLinks.map((link) => (
                 <li key={link.text}>
-                  <Link href={link.href}  className={`block py-2 pr-4 pl-3 text-sm ${router.pathname === link.href ? 'text-white rounded bg-orange-700' : 'text-gray-700 border-b border-red-100 hover:bg-gray-50'}`}>
+                  <Link href={link.href}  className={`block py-2 pr-4 pl-3 text-sm ${router.pathname === link.href ? 'text-orange-500 rounded border-b border-gray-400' : 'text-orange-400  hover:bg-zinc-600'}`}>
                     {link.text}
                   </Link>
                 </li>
@@ -54,7 +57,7 @@ const TopNavbar: React.FC = () => {
             </ul>
           </div>
         </div>
-      </nav>
+      
           {/* <div className=" flex max-w-7xl items-center justify-evenly p-2 lg:px-8" aria-label="Global"> */}
       {/* Your social links */}
       {/* <Link href="https://github.com/Itzz07/" passHref target="_blank" rel="noopener noreferrer" className="text-white mx-2">
@@ -69,12 +72,12 @@ const TopNavbar: React.FC = () => {
       </Link>
       <Link href="mailto:zimbajoel1@gmail.com" passHref className="text-white mx-2">
             <FaMailBulk />
-        </Link> */}
+        </Link> */} 
 
-    {/* </div> */}
+    
         {/* </div>
-      </div>
-    </nav> */}
+       */}
+    </nav>
   </header>
 
     

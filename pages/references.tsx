@@ -30,15 +30,18 @@ const References: React.FC = () => {
 
   return (
     <Layout>
-      <div className="container ">
-        <h1 className="text-3xl font-bold px-5 m-5">Reference Page</h1>
-        <div className='py-24 px-5  mx-auto'>
-          <div className="flex flex-wrap -m-4 justify-center">
+      <div className="pt-36">
+        <div className="mx-auto px-6 max-w-6xl">
+          <div className="text-center">
+              <h2 className="text-3xl text-gray-950 dark:text-zinc-300 font-semibold">References</h2>
+              <p className="mt-6 text-gray-700 dark:text-orange-300">Feel Free to Contact Some of The References listed.</p>
+          </div>
+          <div className=" mt-12 flex flex-wrap  justify-center">
             {references.map((reference, index) => (
               <div key={index} className="lg:w-1/3 lg:mb-0 mb-6 p-4">
                 <div className="h-full text-center">
                   <Image
-                    src="/images/hero-image.png"
+                    src="/images/ref-image.jpg"
                     alt="testimonial"
                     className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
                     width={20}

@@ -31,14 +31,14 @@ const Home: React.FC = () => {
   
   return (
     <Layout>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-screen p-4">
+      <div className="mx-auto pt-36 px-6 max-w-6xl grid grid-cols-1 md:grid-cols-2 items-center justify-center p-4">
   {/* Image */}
   <div className="md:order-first flex items-center justify-center p-4">
-    <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+    <div className="shadow-2xl shadow-orange-600 rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
       <Image
         src="/images/hero-image.png"
         alt="hero image"
-        className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        className="absolute  transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
         width={300}
         height={300}
       />
@@ -53,7 +53,7 @@ const Home: React.FC = () => {
       </span>
       <animated.h1
         style={fade}
-        className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-400 to-orange-600 text-7xl md:text-5xl lg:text-6xl text-center font-extrabold m-4 "
+        className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-400 to-orange-500 text-7xl md:text-5xl lg:text-6xl text-center font-extrabold m-4 "
       >
         {texts[textIndex]}
       </animated.h1>
@@ -61,13 +61,13 @@ const Home: React.FC = () => {
     <div className="space-y-4 md:space-y-0 md:space-x-4">
       <Link
         href="/contact"
-        className="bg-orange-500 text-white px-4 py-2 rounded block w-full md:inline-block md:w-auto hover:bg-orange-600"
+        className="bg-orange-500 text-white px-4 py-2 rounded block w-full md:inline-block md:w-auto hover:bg-orange-600 hover:shadow-zinc-600 shadow-md "
       >
         Contact Me
       </Link>
       <Link
         href="/projects"
-        className="bg-zinc-500 text-white px-4 py-2 rounded block w-full md:inline-block md:w-auto hover:bg-zinc-600"
+        className="bg-zinc-500 text-white px-4 py-2 rounded block w-full md:inline-block md:w-auto hover:bg-zinc-600  hover:shadow-orange-600 shadow-md "
       >
         Projects
       </Link>
