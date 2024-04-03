@@ -1,9 +1,8 @@
 // components/TopNavbar.tsx
 import Link from 'next/link';
-import { FaGithub, FaTwitter, FaLinkedin, FaMailBulk, FaMailchimp, FaVoicemail } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-
+import Image from "next/image";
 const TopNavbar: React.FC = () => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +29,17 @@ const TopNavbar: React.FC = () => {
       >
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link href="https://flowbite.com"  className="flex items-center">
-              <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+              {/* <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" /> */}
+              {/* <Image
+                    src="/images/image-1.png"
+                    alt="testimonial"
+                    className="mr-3 h-6 sm:h-9 object-cover object-center rounded-full border-2 border-orange-200 bg-gray-100"
+                    width={40}
+                    height={40}
+                  /> */}
+                  <svg xmlns="http://www.w3.org/2000/svg" className="rounded-full text-orange-400 h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+                    <path fillRule="evenodd" d="M2 3a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3zm6 8v7h3v-6h2l-.25 6h2l-.25 6h2v-7l-3 1-3-1V8h-2z" clipRule="evenodd" />
+                  </svg>
               <span className="self-center text-xl font-bold whitespace-nowrap dark:text-orange-500">Itzz</span>
 
           </Link>
@@ -57,27 +66,7 @@ const TopNavbar: React.FC = () => {
             </ul>
           </div>
         </div>
-      
-          {/* <div className=" flex max-w-7xl items-center justify-evenly p-2 lg:px-8" aria-label="Global"> */}
-      {/* Your social links */}
-      {/* <Link href="https://github.com/Itzz07/" passHref target="_blank" rel="noopener noreferrer" className="text-white mx-2">
-          <FaGithub />
-       
-      </Link>
-      <Link href="https://twitter.com/rio_itzz" passHref target="_blank" rel="noopener noreferrer" className="text-white mx-2">
-          <FaTwitter />
-      </Link>
-      <Link href="https://www.linkedin.com/in/joel-zimba-5325a8293/" passHref  target="_blank" rel="noopener noreferrer" className="text-white mx-2">
-          <FaLinkedin />
-      </Link>
-      <Link href="mailto:zimbajoel1@gmail.com" passHref className="text-white mx-2">
-            <FaMailBulk />
-        </Link> */} 
-
-    
-        {/* </div>
-       */}
-    </nav>
+      </nav>
   </header>
 
     

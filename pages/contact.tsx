@@ -80,104 +80,101 @@ const Contact: React.FC = () => {
   
     return (
     <Layout>
- 
-
-<div className="container pt-36 px-5 py-14 mx-auto flex sm:flex-nowrap flex-wrap">
-    <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-      <iframe width="100%" height="100%" className="absolute inset-0"  title="map"   scrolling="no" 
-      src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" 
-      style={{filter: 'grayscale(1) contrast(1.2) opacity(0.4)'}}></iframe>
-      <div className="bg-neutral-200 relative flex flex-wrap py-6 rounded shadow-md">
-        <div className="lg:w-1/2 px-6">
-          <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
-          <p className="mt-1">Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter</p>
+      <div className="container pt-36 px-5 py-14 mx-auto flex sm:flex-nowrap flex-wrap">
+        <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+          <iframe width="100%" height="100%" className="absolute inset-0"  title="map"   scrolling="no" 
+          src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" 
+          style={{filter: 'grayscale(1) contrast(1.2) opacity(0.4)'}}></iframe>
+          <div className="bg-neutral-200 relative flex flex-wrap py-6 rounded shadow-md">
+            <div className="lg:w-1/2 px-6">
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
+              <p className="mt-1 text-orange-500">Lusaka, Zambia</p>
+            </div>
+            <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+              <Link className="text-orange-500 leading-relaxed" href={'mailto: zimbajoel1@gmail.com'}>zimbajoel1@gmail.com</Link>
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+              <Link className="leading-relaxed text-orange-500 " href={'tel: +260770552553'}> +260 770 552 553</Link>
+            </div>
+          </div>
         </div>
-        <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-          <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-          <Link className="text-orange-500 leading-relaxed" href={'mailto: zimbajoel1@gmail.com'}>zimbajoel1@gmail.com</Link>
-          <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
-          <Link className="leading-relaxed text-orange-500 " href={'tel: +260770552553'}> +260 770 552 553</Link>
+        
+        <div className="lg:w-1/3 md:w-1/2  flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+          <h2 className="text-zinc-300 text-lg mb-1 font-medium title-font">Feedback</h2>
+          <p className="leading-relaxed mb-5 text-orange-400">Fill in the Form</p>
+          <div>
+            {notification.message && (
+              <div className={`notification ${notification.type === 'success' ? 'text-green-500' : 'text-red-500'} text-sm mt-2`}>
+                {notification.message}
+              </div>
+            )}
+
+            <form className="flex flex-col" onSubmit={(e) => handleSubmit(e as FormEvent<HTMLFormElement>)}>
+              {/* ... (your form input fields) */}
+              <div className="relative mb-4">
+                <label
+                  htmlFor="email"
+                  className="text-orange-300 block mb-2 text-sm font-medium"
+                >
+                  Email
+                </label>
+                <input
+                  name="email"
+                  type="email"
+                  id="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                  placeholder="jacob@google.com"
+                />
+              </div>
+              <div className="relative mb-4">
+                <label
+                  htmlFor="subject"
+                  className="text-orange-300 block text-sm mb-2 font-medium"
+                >
+                  Subject
+                </label>
+                <input
+                  name="subject"
+                  type="text"
+                  id="subject"
+                  required
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                  placeholder="Just saying hi"
+                />
+              </div>
+              <div className="relative mb-4">
+                <label
+                  htmlFor="message"
+                  className="text-orange-300 block text-sm mb-2 font-medium"
+                >
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                  placeholder="Let's talk about..."
+                />
+              </div>
+              <button
+                type="submit"
+                className="text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600  hover:shadow-zinc-600 shadow-md rounded text-lg"
+                disabled={loading}
+              >
+                {loading ? 'Sending...' : 'Send Message'}
+              </button>
+            </form>
+          </div>
+          <p className="text-xs text-orange-300 mt-3">Will get back to you as soon as possible.</p>
         </div>
       </div>
-    </div>
-    
-    <div className="lg:w-1/3 md:w-1/2  flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-      <h2 className="text-zinc-300 text-lg mb-1 font-medium title-font">Feedback</h2>
-      <p className="leading-relaxed mb-5 text-orange-400">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
-      <div>
-  {notification.message && (
-    <div className={`notification ${notification.type === 'success' ? 'text-green-500' : 'text-red-500'} text-sm mt-2`}>
-      {notification.message}
-    </div>
-  )}
-
-  <form className="flex flex-col" onSubmit={(e) => handleSubmit(e as FormEvent<HTMLFormElement>)}>
-    {/* ... (your form input fields) */}
-      <div className="relative mb-4">
-      <label
-        htmlFor="email"
-        className="text-orange-300 block mb-2 text-sm font-medium"
-      >
-        Email
-      </label>
-      <input
-        name="email"
-        type="email"
-        id="email"
-        required
-        value={formData.email}
-        onChange={handleChange}
-        className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-        placeholder="jacob@google.com"
-      />
-      </div>
-      <div className="relative mb-4">
-      <label
-        htmlFor="subject"
-        className="text-orange-300 block text-sm mb-2 font-medium"
-      >
-        Subject
-      </label>
-      <input
-        name="subject"
-        type="text"
-        id="subject"
-        required
-        value={formData.subject}
-        onChange={handleChange}
-        className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-        placeholder="Just saying hi"
-      />
-      </div>
-      <div className="relative mb-4">
-      <label
-        htmlFor="message"
-        className="text-orange-300 block text-sm mb-2 font-medium"
-      >
-        Message
-      </label>
-      <textarea
-        name="message"
-        id="message"
-        value={formData.message}
-        onChange={handleChange}
-        className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-        placeholder="Let's talk about..."
-      />
-      </div>
-      <button
-        type="submit"
-        className="text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600  hover:shadow-zinc-600 shadow-md rounded text-lg"
-        disabled={loading}
-      >
-        {loading ? 'Sending...' : 'Send Message'}
-      </button>
-      </form>
-</div>
-      <p className="text-xs text-orange-300 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
-    </div>
-  </div>
-
     </Layout>
   );
 };
