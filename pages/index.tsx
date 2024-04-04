@@ -40,8 +40,8 @@ const Home: React.FC = () => {
               src="/images/person-1.png"
               alt="hero image"
               className="absolute  transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
+              width={400}
+              height={400}
             />
           </div>
         </div>
@@ -59,16 +59,16 @@ const Home: React.FC = () => {
               {texts[textIndex]}
             </animated.h1>
           </div>
-          <div className="space-y-4 md:space-y-0 md:space-x-4">
+          <div className="space-y-4 space-x-4">
             <Link
               href="/contact"
-              className="bg-orange-500 text-white px-4 py-2 rounded block w-full md:inline-block md:w-auto hover:bg-orange-600 hover:shadow-zinc-600 shadow-md "
+              className="bg-orange-500 text-white px-4 py-2 rounded-3xl  w-full  md:w-auto hover:bg-orange-600 hover:shadow-zinc-600 shadow-md "
             >
               Contact Me
             </Link>
             <Link
               href="/projects"
-              className="bg-zinc-500 text-white px-4 py-2 rounded block w-full md:inline-block md:w-auto hover:bg-zinc-600  hover:shadow-orange-600 shadow-md "
+              className="bg-zinc-500 text-white px-4 py-2 rounded-3xl  w-full  md:w-auto hover:bg-zinc-600  hover:shadow-orange-600 shadow-md "
             >
               Projects
             </Link>
