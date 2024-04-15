@@ -27,6 +27,13 @@ const Projects: React.FC = () => {
       urlDonwnload: 'https://drive.google.com/drive/folders/1vg4HkWlqYdt8t3vAf9TpTcmvPCONcBNe',
       urlSourceCode: 'Details about Project 1.',
      },
+    { 
+      image: '/images/projects/qr_genie.png',
+      title: 'QR Genie', 
+      details: 'QR Genie is a mobile application simply used to generate qr codes from url\'s.', 
+      urlDonwnload: 'https://drive.google.com/drive/folders/1vg4HkWlqYdt8t3vAf9TpTcmvPCONcBNe',
+      urlSourceCode: 'Details about Project 1.',
+     },
     // Add more projects with appropriate categories
   ];
 
@@ -43,15 +50,15 @@ const Projects: React.FC = () => {
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {projects.map((projects, index) => (
               <div key={index} className="relative group overflow-hidden p-[--card-padding] rounded-3xl bg-white border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] dark:bg-[--card-dark-bg]">
-                <div aria-hidden="true" className="inset-0 absolute aspect-video border rounded-full -translate-y-1/2 group-hover:-translate-y-1/4 duration-300 bg-gradient-to-b from-red-500 to-white dark:from-white dark:to-white blur-2xl opacity-25 dark:opacity-0 dark:group-hover:opacity-5"></div>
+                <div aria-hidden="true" className="inset-0 absolute aspect-video border rounded-full -translate-y-1/2 group-hover:-translate-y-1/4 duration-300 bg-gradient-to-b  to-white dark:from-white dark:to-white blur-2xl opacity-25 dark:opacity-0 dark:group-hover:opacity-5"></div>
                   <div className="relative py-5 px-10">
                     <div className="border border-warning-500/10 flex relative *:relative *:size-12 *:m-auto size-16 rounded-2xl dark:bg-gray-900 dark:border-white/15 before:rounded-xl before:absolute before:inset-0 before:border-t before:border-white before:from-warning-100 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-950">
                       <Image
                         src={projects.image}
                         alt="testimonial"
-                        className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                        width={20}
-                        height={20}
+                        className="w-25 h-25 mb-8 object-cover object-center rounded-3xl inline-block border-2 border-gray-200 bg-gray-100"
+                        width={25}
+                        height={25}
                       />
                       {/* <svg className="text-[#000014] dark:text-white" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 128 128">
                         <defs>

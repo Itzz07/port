@@ -54,7 +54,7 @@ const Home: React.FC = () => {
             </span>
             <animated.h1
               style={fade}
-              className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-400 to-orange-500 text-7xl md:text-5xl lg:text-6xl text-center font-extrabold m-4 "
+              className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-400 to-orange-500 text-6xl md:text-5xl lg:text-7xl text-center font-extrabold m-4 "
             >
               {texts[textIndex]}
             </animated.h1>

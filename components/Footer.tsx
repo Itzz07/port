@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
     <footer >
         <div className="max-w-6xl mx-auto space-y-16 px-6 py-16 text-gray-600 2xl:px-0">
             <div className="flex flex-wrap items-center justify-between gap-4 border-b border-t py-8 border-[--ui-light-border-color] dark:border-[--ui-dark-border-color]">
-                <Link href="https://flowbite.com"  className="flex items-center">
+                <Link href="/"  className="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="rounded-full text-orange-400 h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
                         <path fillRule="evenodd" d="M2 3a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3zm6 8v7h3v-6h2l-.25 6h2l-.25 6h2v-7l-3 1-3-1V8h-2z" clipRule="evenodd" />
                     </svg>
