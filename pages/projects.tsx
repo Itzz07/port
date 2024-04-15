@@ -11,28 +11,28 @@ const Projects: React.FC = () => {
       title: 'Ask', 
       details: 'Integrating the Gemini API, It\'s simply a chatbot that provides an interface for intuitive interaction. enabling seamless integration with cryptocurrency markets, providing users with real-time data and insights.',
       urlDonwnload: 'https://drive.google.com/drive/folders/1vg4HkWlqYdt8t3vAf9TpTcmvPCONcBNe',
-      urlSourceCode: 'Details about Project 1.',
+      urlSourceCode: 'https://github.com/Itzz07/ask',
     },
     { 
       image: '/images/projects/unzaweather.jpg',
       title: 'UnzaWeather',
       details: 'Developed a comprehensive departmental weather station project,hence this mobile application provides real-time weather updates, integrating hardware components with software solutions to deliver a seamless user experience',
       urlDonwnload: 'https://drive.google.com/drive/folders/1vg4HkWlqYdt8t3vAf9TpTcmvPCONcBNe',
-      urlSourceCode: 'Details about Project 1.',
+      urlSourceCode: 'https://github.com/Itzz07/unza_weather',
     },
     { 
       image: '/images/projects/word.jpg',
       title: 'Revelation Word', 
       details: 'Revelation Word is a mobile application tailored for efficient communication and information sharing amongest it\'s members.', 
       urlDonwnload: 'https://drive.google.com/drive/folders/1vg4HkWlqYdt8t3vAf9TpTcmvPCONcBNe',
-      urlSourceCode: 'Details about Project 1.',
+      urlSourceCode: 'https://github.com/Itzz07/word',
      },
     { 
       image: '/images/projects/qr_genie.png',
       title: 'QR Genie', 
       details: 'QR Genie is a mobile application simply used to generate qr codes from url\'s.', 
       urlDonwnload: 'https://drive.google.com/drive/folders/1vg4HkWlqYdt8t3vAf9TpTcmvPCONcBNe',
-      urlSourceCode: 'Details about Project 1.',
+      urlSourceCode: 'https://github.com/Itzz07/qr_genie',
      },
     // Add more projects with appropriate categories
   ];

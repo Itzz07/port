@@ -58,7 +58,7 @@ const Experience: React.FC = () => {
             <div className="flex flex-col sm:flex-row mt-10 ">      
               <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
                 <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10" viewBox="0 0 24 24">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round"  stroke-width="2" className="w-10 h-10" viewBox="0 0 24 24">
                   <path d="M12 0L3 5v14l9-5 9 5V5l-9-5zm5 17.93l-4.23-2.36L12 17.21l-1.77-1.64L7 17.93V6.07l5-2.79 5 2.79v11.86z"/>
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
@@ -88,35 +88,7 @@ const Experience: React.FC = () => {
         </div>
       </div>
 
-                {/* <div className="grid grid-cols-1 gap-3 my-10 mx-10 md:mx-20 xl:mx-30">
-          {experiences.map((experience, index) => (
-            <div key={index} className="mb-2">
-              <div
-                className="flex items-center bg-gray-800 p-4 rounded-lg cursor-pointer"
-                onClick={() => toggleDuties(index)}
-              >
-                <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10" viewBox="0 0 24 24">
-                  <path d="M12 0L3 5v14l9-5 9 5V5l-9-5zm5 17.93l-4.23-2.36L12 17.21l-1.77-1.64L7 17.93V6.07l5-2.79 5 2.79v11.86z"/>
-                    <circle cx="12" cy="7" r="3"></circle>
-                  </svg>
-                </div>
-                <div>
-                  <h2 className="text-xl font-bold text-white">{experience.company}</h2>
-                  <p className="text-gray-400">{experience.position}</p>
-                </div>
-              </div>
-              {expandedIndex === index && (
-                <ul className="text-gray-400 mt-2 list-disc list-inside pl-8">
-                  {experience.duties.map((duty, dutyIndex) => (
-                    <li key={dutyIndex}>{duty}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
-        </div> */}
-
+            
 
     </Layout>
   );
