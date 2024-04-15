@@ -70,8 +70,8 @@ const About: React.FC = () => {
           </div>
       <div className="sm:grid md:grid-cols-2 gap-20 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="relative h-full flex-col p-10 w-full md:w-96 mx-auto">
-          <div className="w-full h-full rounded-full overflow-hidden">
-            <Image src="/images/ref-image.jpg" width={700} height={700} alt={''} className="object-cover rounded-full shadow-orange" />
+          <div className="w-full h-full rounded-full overflow-hidden shadow-3xl shadow-orange-600">
+            <Image src="/images/person.png" width={700} height={700} alt={''} className="object-cover rounded-full" />
           </div>
         </div>          
         <div className="md:mt-0 text-left flex flex-col h-full">
