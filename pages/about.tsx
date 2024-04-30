@@ -39,7 +39,7 @@ const About: React.FC = () => {
               <h2 className="text-3xl text-gray-950 dark:text-zinc-300 font-semibold">Info</h2>
               <p className="my-6 text-gray-700 dark:text-orange-300 ">Insight Info.</p>
           </div>
-          <div className="flex justify-center items-center bg-gradient-to-r from-zinc-900 via-slate-800 to-neutral-700 p-4 md:py-8">
+          <div className="flex justify-center items-center bg-gradient-to-r from-zinc-900 via-neutral-800 to-slate-700 p-4 md:py-8 mb-8">
             <div className="px-2">
               <div className="flex items-center justify-center space-x-10">
                 <div className="md:ml-[6px] flex flex-col items-center lg:flex-row">
@@ -62,15 +62,15 @@ const About: React.FC = () => {
               </div>
             </div>
           </div> 
-          <div className="flex items-center justify-center text-center bg-gradient-to-r from-neutral-800 via-zinc-900 to-zinc-950">
-            <div className="flex flex-col p-2 m-2  max-w-7xl ">
+          <div className="flex items-center justify-center text-center bg-gradient-to-r from-slate-700 via-natural-800 to-zinc-950 mb-8">
+            <div className="flex flex-col p-2 m-2  ">
               <div className="text-xl mt-8 md:text-3xl text-zinc-300 font-medium">Skills</div>
               <div className="text-sm my-6 mx-2 md:text-xl text-orange-300">list of skills, Programming tools and Frameworks.</div>
-              <div className="flex flex-wrap items-center justify-evenly md:px-40 px-10 space-x-7">
+              <div className="flex flex-wrap items-center justify-evenly md:px-20 px-8 space-x-1">
                 {skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="md:w-32 h-32 w-20 flex flex-col items-center justify-evenly m-4  rounded-full "
+                    className="md:w-24 h-24 w-20 flex flex-col items-center justify-evenly m-4  rounded-full "
                   >
                     <CircularProgressbar
                       value={skill.percentage}

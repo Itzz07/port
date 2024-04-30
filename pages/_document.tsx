@@ -1,4 +1,10 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BLOG TECH",
+  description: "~ by itzz rio",
+};
 
 export default function Document() {
   return (
